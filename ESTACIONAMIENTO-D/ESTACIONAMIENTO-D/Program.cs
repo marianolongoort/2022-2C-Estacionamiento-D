@@ -1,9 +1,15 @@
+using ESTACIONAMIENTO_D.Models;
+
 namespace ESTACIONAMIENTO_D
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            Cliente cliente = new Cliente();
+            
+
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
