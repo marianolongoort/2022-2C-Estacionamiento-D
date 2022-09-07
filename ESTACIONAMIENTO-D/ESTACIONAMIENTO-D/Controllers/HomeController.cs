@@ -6,16 +6,15 @@ namespace ESTACIONAMIENTO_D.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+     
         public IActionResult Index()
         {
-            return View();
+            List<int> numeros = new List<int>() { 1, 2, 3, 4, 5 };
+
+            ViewBag.Persona = new Persona() { Apellido="Picapiedra",Nombre="Pedro"};
+
+            ViewResult resultado = View(numeros);
+            return resultado;
         }
 
         public IActionResult Privacy()

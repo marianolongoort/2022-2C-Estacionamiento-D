@@ -1,8 +1,21 @@
-﻿@{
+﻿@model List<int>
+
+@{
     ViewData["Title"] = "Home Page";
+    
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Buenas</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div>
+    <p>El nombre de la persona  es @ViewBag.Persona.Nombre y el apellido @ViewBag.Persona.Apellido</p>
+</div>
+
+@if(true){
+    foreach (int numero in Model){
+        <button>@numero</button>
+    }
+}
