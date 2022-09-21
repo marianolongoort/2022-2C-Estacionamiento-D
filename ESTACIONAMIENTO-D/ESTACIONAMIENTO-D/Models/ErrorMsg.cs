@@ -2,7 +2,8 @@
 {
     public static class ErrorMsg
     {
-        public const string MsgReq = "El {0} es requeridishimo";
+        public const string MsgReq = "El {0} es requerido";
         public const string MsgMaxStr = "La propiedad {0} debe tener como máximo {1} caracteres";
+        public const string TipoInvalido = "El campo {0} no es valido";
     }
 }

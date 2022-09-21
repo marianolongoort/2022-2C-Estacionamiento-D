@@ -1,0 +1,10 @@
+﻿@model List<Persona>
+
+
+<a asp-controller="PersonasOld" asp-action="Create" class="btn btn-primary">Crear persona</a>
+
+
+
+@foreach(Persona persona in Model){
+    <p>@persona.NombreCompleto</p>
+}

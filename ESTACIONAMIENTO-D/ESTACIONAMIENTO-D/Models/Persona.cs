@@ -4,8 +4,6 @@ namespace ESTACIONAMIENTO_D.Models
 {
     public class Persona
     {
-        
-
         public int Id { get; set; }
 
         
@@ -22,13 +20,15 @@ namespace ESTACIONAMIENTO_D.Models
 
         public List<Telefono> Telefonos { get; set; }
 
-        [EmailAddress]
+        [Display(Name ="Correo electronico")]
+        [EmailAddress(ErrorMessage = ErrorMsg.TipoInvalido)]
         public string Email { get; set; }
 
 
         [DataType(DataType.Date)]
-        public DateTime FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; } = DateTime.Today;
 
+        public int Dni { get; set; }
 
 
         public string NombreCompleto { 

@@ -1,4 +1,6 @@
+using ESTACIONAMIENTO_D.Data;
 using ESTACIONAMIENTO_D.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ESTACIONAMIENTO_D
 {
@@ -9,10 +11,18 @@ namespace ESTACIONAMIENTO_D
             Cliente cliente = new Cliente();
             
 
+            
+
+
+
 
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<EstacionamientoContext>(options => options.UseInMemoryDatabase("EstacionamientoDB"));
+
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
@@ -38,5 +48,7 @@ namespace ESTACIONAMIENTO_D
 
             app.Run();
         }
+   
+
     }
 }
